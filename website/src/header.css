@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 40px 20px 40px;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.club-name-link {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 50px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.menu-link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+}
