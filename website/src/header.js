@@ -1,22 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-// import './index.css';
 import './header.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Link } from 'react-router-dom';
 
 
 class Header extends React.Component {
   render() {
     return (
       <div className='header'>
-        <a class='club-name-link' href='#'>UXBR</a>
+        <Link class='club-name-link' to="/">UXBR</Link>
 
         <div className='menu-container'>
           <div className='menu'>
-            <a class='menu-link' href='#'>About</a>
-            <a class='menu-link' href='#'>Events</a>
-            <a class='menu-link' href='#'>Projects</a>
+            <Link class='menu-link' to="/about">About</Link>
+            <Link class='menu-link' to="/events">Events</Link>
+            <Link class='menu-link' to="/projects">Projects</Link>
           </div>
         </div>
       </div>
