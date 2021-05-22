@@ -59,7 +59,6 @@ class Board extends React.Component {
     this.state = {
       categories: ['category 1', 'category 2', 'category 3', 'category 4'],
       total_board: [
-      // don't know why this won't compile
         <Tile title='Project Title'
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
         status='Ongoing' categories={['category 1', 'category 2', 'category 3']}/>,
@@ -90,7 +89,7 @@ class Board extends React.Component {
         <div class='tile-container'>
           <h1>{tile.title}</h1>
           <h2>{tile.description}</h2>
-          // todo: add categories, somehow make them all separate elements
+          // todo: add categories, somehow make them all separate html elements
           <h3>{tile.status}</h3>
         </div>
       )))}
