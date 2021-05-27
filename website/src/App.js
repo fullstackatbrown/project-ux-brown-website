@@ -3,9 +3,9 @@ import Footer from './footer.js';
 import { Switch, Route } from 'react-router-dom';
 import About from './about.js';
 import Home from './home.js';
-import Board from './projects.js';
-import Tile from './projects.js';
-import Filter from './projects.js';
+// import Board from './board.js'; comment back in when finished
+import Tile from './tile.js';
+import Filter from './filter.js';
 
 function App() {
   return (
@@ -17,8 +17,6 @@ function App() {
         {/* <Route path="/projects" component={Projects}/> */}
       </Switch>
       <Footer />
-      // temporary, for testing
-      <Board />
     </div>
   );
 }

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+.tile-container {
+  display: flex;
+  width: 507px;
+  height: 500px;
+  flex-direction: column;
+
+/* TODO: this is from figma, figure out what it means before deleting */
+  /* order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px; */
+
+}
+
+.grey-box {
+  border-radius: 15px 15px 0px 0px;
+  width: 507px;
+  height: 237px;
+  background: #C4C4C4;
+}
+
+.white-box {
+  width: 507px;
+  height: 256px;
+  padding-left: 10px;
+}
+
+/* Title */
+h1 {
+  font-family: 'Raleway', sans-serif;
+
+  display: flex;
+  width: 459px;
+  height: 31px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+
+  color: #000000;
+}
+
+/* Description */
+h2 {
+  display: flex;
+  width: 459px;
+  height: 56px;
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+/* Status */
+h3 {
+  display: flex;
+  width: 40px;
+  height: 21px;
+
+  font-family: 'Space Mono', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #000000;
+}
+
+/* list of category tags */
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+/* category tag */
+li {
+
+  display: flex;
+  width: 200px;
+  height: 43px;
+
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  justify-content: center;
+  align-items: center;
+
+  color: #000000;
+  border-radius: 10px;
+  margin-right: 10px;
+
+}
+
+/* Specific colors for the project tags */
+
+/* aquamarine */
+.category-0 {
+  background: #ADDCD1;
+}
+
+/* yellow */
+.category-1 {
+  background: #FFCC01;
+}
+
+/* coral */
+.category-2 {
+  background: #FF8260;
+}
+
+/* royal blue */
+.category-3 {
+  background: #2D56C2;
+}
