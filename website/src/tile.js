@@ -28,9 +28,9 @@ class Tile extends React.Component {
       <div class='tile-container'>
         <div class='grey-box'></div>
         <div class='white-box'>
-          <h3>{this.state.status}</h3>
-          <h1>{this.state.title}</h1>
-          <h2>{this.state.description}</h2>
+          <h1>{this.state.status}</h1>
+          <h2>{this.state.title}</h2>
+          <h3>{this.state.description}</h3>
           <ul>{listItems}</ul>
         </div>
       </div>

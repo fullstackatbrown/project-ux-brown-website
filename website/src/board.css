@@ -1,0 +1,13 @@
+
+.board {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.board-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10%;
+  /* flex-wrap: wrap; */
+}
