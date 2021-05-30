@@ -10,14 +10,41 @@
   justify-content: space-between;
 }
 
+form {
+  float: right;
+  padding: 0px 100px 75px 0px;
+}
+
+.buttons {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.buttons input:hover {background-color: #f1f1f1}
+
+.filter-container:hover .buttons {
+  display: block;
+}
+
 .filter-container h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-.filter-container.filter-button {
+.filter-container input {
+  display: block;
+}
+
+.filter-container label {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 15px;
+  margin-left: 10px;
 }

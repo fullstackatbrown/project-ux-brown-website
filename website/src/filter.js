@@ -24,18 +24,20 @@ class Filter extends React.Component {
     return (
       <form>
       <h1>Filter</h1>
-        <input class='filter-button' type='radio' id='category-1'
-        value='category-1' onChange={this.filterBoard}/>
-        <label for='category 1'>project category</label>
-        <input class='filter-button' type='radio' id='category-2'
-        value='category-2' onChange={this.filterBoard}/>
-        <label for='category 2'>project category</label>
-        <input class='filter-button' type='radio' id='category-3'
-        value='category-3' onChange={this.filterBoard}/>
-        <label for='category 3'>project category</label>
-        <input class='filter-button' type='radio' id='category-4'
-        value='category-4' onChange={this.filterBoard}/>
-        <label for='category 4'>project category</label>
+        <div class='buttons'>
+          <input class='filter-button' type='radio' id='category-1'
+          value='category-1' onChange={this.filterBoard}/>
+          <label for='category 1'>project category</label>
+          <input class='filter-button' type='radio' id='category-2'
+          value='category-2' onChange={this.filterBoard}/>
+          <label for='category 2'>project category</label>
+          <input class='filter-button' type='radio' id='category-3'
+          value='category-3' onChange={this.filterBoard}/>
+          <label for='category 3'>project category</label>
+          <input class='filter-button' type='radio' id='category-4'
+          value='category-4' onChange={this.filterBoard}/>
+          <label for='category 4'>project category</label>
+        </div>
       </form>
 
     );
