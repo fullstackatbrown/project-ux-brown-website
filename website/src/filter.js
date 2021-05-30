@@ -25,17 +25,17 @@ class Filter extends React.Component {
       <form>
       <h1>Filter</h1>
         <input class='filter-button' type='radio' id='category-1'
-        value='category 1' onChange={this.filterBoard}/>
-        <label for='category 1'>Category 1</label>
+        value='category-1' onChange={this.filterBoard}/>
+        <label for='category 1'>project category</label>
         <input class='filter-button' type='radio' id='category-2'
-        value='category 2' onChange={this.filterBoard}/>
-        <label for='category 2'>Category 2</label>
+        value='category-2' onChange={this.filterBoard}/>
+        <label for='category 2'>project category</label>
         <input class='filter-button' type='radio' id='category-3'
-        value='category 3' onChange={this.filterBoard}/>
-        <label for='category 3'>Category 3</label>
+        value='category-3' onChange={this.filterBoard}/>
+        <label for='category 3'>project category</label>
         <input class='filter-button' type='radio' id='category-4'
-        value='category 4' onChange={this.filterBoard}/>
-        <label for='category 4'>Category 4</label>
+        value='category-4' onChange={this.filterBoard}/>
+        <label for='category 4'>project category</label>
       </form>
 
     );

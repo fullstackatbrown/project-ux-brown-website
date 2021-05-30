@@ -114,6 +114,7 @@ class Board extends React.Component {
 
       return (
         <div class='board'>
+          <div class='filter-container'>{filter}</div>
           <div class='board-row'>
             {this.renderTile(this.state.total_board[0])}
             {this.renderTile(this.state.total_board[1])}
