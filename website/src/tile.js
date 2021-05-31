@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import './tile.css'
-import Filter from './filter.js'
 import Board from './board.js'
 import Header from './header.js';
 import Footer from './footer.js';

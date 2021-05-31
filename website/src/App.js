@@ -4,8 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 import About from './about.js';
 import Home from './home.js';
 import Board from './board.js';
-import Tile from './tile.js';
-import Filter from './filter.js';
 
 function App() {
   return (
