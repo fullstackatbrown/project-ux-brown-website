@@ -158,9 +158,7 @@ class Board extends React.Component {
           </div>
 
           <div class='board-row'>
-            // this gives the right output
             {console.log(this.state.filtered_board)}
-            // this renders the wrong output--why?? css problem?
             {this.state.filtered_board.map(tile => this.renderTile(tile))}
           </div>
           <div class='board-row'>
