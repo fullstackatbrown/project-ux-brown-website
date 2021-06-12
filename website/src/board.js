@@ -93,40 +93,29 @@ class Board extends React.Component {
     ]
     this.state = {
       filtered_board: this.total_board
+      // filtered_board: this.filterBoard("category-0")
     };
-
-    this.filtered_options = this.filterBoard();
-
     this.handleChange = this.handleChange.bind(this);
     this.filterBoard = this.filterBoard.bind(this);
   }
 
-  filterBoard() {
-
-    const filtered = [];
-
-    for (let cat of this.total_categories) {
-      filtered[cat] = this.filterBoardHelper(cat);
-    }
-
-    return filtered;
-    }
-
-  filterBoardHelper(cat) {
-
-    var filtered = this.total_board;
-
+  filterBoard(cat) {
+    let filtered = [];
     if (cat !== 'all-categories') {
       filtered = this.total_board.filter(tile =>
         (tile.categories.filter(category =>
           category.cssName.includes(cat))).length > 0)
+    } else {
+      filtered = this.total_board;
     }
+    
     return filtered;
   }
 
   handleChange(event) {
-    var choice = event.target.value;
-    this.setState({filtered_board: this.filtered_options[choice]})
+    const choice = event.target.value;
+    const filtered = this.filterBoard(choice);
+    this.setState({filtered_board: filtered})
   }
 
   renderTile(tile) {
@@ -141,6 +130,8 @@ class Board extends React.Component {
   }
 
   render() {
+    const tiles = this.state.filtered_board.map(tile => this.renderTile(tile));
+    console.log(tiles);
 
       return (
         <div class='board'>
@@ -158,8 +149,8 @@ class Board extends React.Component {
           </div>
 
           <div class='board-row'>
-            {console.log(this.state.filtered_board)}
-            {this.state.filtered_board.map(tile => this.renderTile(tile))}
+            {/* {console.log(this.state.filtered_board)} */}
+            {tiles}
           </div>
           <div class='board-row'>
           </div>

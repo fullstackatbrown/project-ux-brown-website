@@ -6,6 +6,8 @@ import './tile.css'
 class Tile extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props.categories)
+
     this.state = {
       // see below for instructions
       title: this.props.title,
@@ -15,8 +17,22 @@ class Tile extends React.Component {
   };
 }
 
-  render() {
+componentDidUpdate(prevProps) {
+  console.log("is updating");
+  console.log(prevProps);
+  console.log(this.props);
+  if (this.props !== prevProps) {
+    const state = {
+      title: this.props.title,
+      description: this.props.description,
+      status: this.props.status,
+      categories: this.props.categories
+  };
+    this.setState(state);
+  }
+}
 
+  render() {
     const listItems = this.state.categories.map((category) =>
     <li class={category.cssName}>{category.displayName}</li>);
 
