@@ -1,0 +1,24 @@
+import React from 'react';
+import './dark_header.css';
+import { Link } from 'react-router-dom';
+
+
+class DarkHeader extends React.Component {
+  render() {
+    return (
+      <div className='header'>
+        <Link class='club-name-link' to="/">UXBR</Link>
+
+        <div className='menu-container'>
+          <div className='menu'>
+            <Link class='menu-link' to="/about">About</Link>
+            <Link class='menu-link' to="/events">Events</Link>
+            <Link class='menu-link' to="/projects">Projects</Link>
+          </div>
+        </div>
+      </div>
+  );
+  }
+}
+
+export default DarkHeader
