@@ -1,4 +1,5 @@
 import Header from './header.js';
+import DarkHeader from './dark_header.js'
 import Footer from './footer.js';
 
 function Home() {
