@@ -3,7 +3,7 @@ import './App.css';
 import './events.css'
 import EventTile from './event_tile.js'
 import DarkHeader from './dark_header.js';
-import DateObject from "react-date-object";
+//import DateObject from "react-date-object";
 
 class Events extends React.Component {
   constructor(props) {
@@ -97,14 +97,14 @@ class Events extends React.Component {
   }
 
   render() {
-      var currentTime = new Date();
-      console.log(currentTime.getTime()); // this is the current time in UTC
+    var currentTime = new Date();
+    console.log(currentTime.getTime()); // this is the current time in UTC
 
-      return (
-        <div class= 'all'>
-          <DarkHeader />
+    return (
+      <div class='all'>
+        <DarkHeader />
 
-        <div class= 'section'> Upcoming events </div>
+        <div class='section'> Upcoming events </div>
         <div class='board'>
           <div class='board-row'>
             {this.total_board.filter(tile => tile.date.getTime() > currentTime.getTime()).map(tile => this.renderTile(tile))}
@@ -113,7 +113,7 @@ class Events extends React.Component {
           </div>
 
         </div>
-        <div class= 'section'> Past events </div>
+        <div class='section'> Past events </div>
         <div class='board'>
           <div class='board-row'>
 
@@ -123,10 +123,10 @@ class Events extends React.Component {
           <div class='board-row'>
           </div>
         </div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
+}
 
 
 export default Events
