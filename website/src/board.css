@@ -1,4 +1,5 @@
 @import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular);
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
 
 /* to create colored circles, look at "before" psuedoelement
 to add to each list component in css and set large border-radius
@@ -17,13 +18,32 @@ to make square look like circle */
   justify-content: space-around;
 }
 
-form {
-  float: right;
-  padding: 0px 100px 75px 0px;
+label {
+  padding-right: 10px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
 }
 
-option {
-  font-family: 'Graphik Web Regular', sans-serif;
-  font-weight: 700;
+select {
+  -webkit-appearance: none;
+
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
   font-size: 20px;
+  line-height: 26px;
+  background: #FFF2E6;
+  width: auto;
+  padding: 0 10px 0 10px;
+}
+
+p {
+  padding-top: 5px;
+}
+
+form {
+  text-align: center;
 }

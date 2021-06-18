@@ -93,7 +93,6 @@ class Board extends React.Component {
     ]
     this.state = {
       filtered_board: this.total_board
-      // filtered_board: this.filterBoard("category-0")
     };
     this.handleChange = this.handleChange.bind(this);
     this.filterBoard = this.filterBoard.bind(this);
@@ -108,14 +107,14 @@ class Board extends React.Component {
     } else {
       filtered = this.total_board;
     }
-    
+
     return filtered;
   }
 
   handleChange(event) {
     const choice = event.target.value;
     const filtered = this.filterBoard(choice);
-    this.setState({filtered_board: filtered})
+    this.setState({filtered_board: filtered, selected_category: choice})
   }
 
   renderTile(tile) {
@@ -131,11 +130,10 @@ class Board extends React.Component {
 
   render() {
     const tiles = this.state.filtered_board.map(tile => this.renderTile(tile));
-    console.log(tiles);
 
       return (
         <div class='board'>
-          <div class='filter-container'>
+          <div>
             <form>
               <label for="filter">Filter</label>
               <select name="filter" id="filter" onChange={this.handleChange}>
@@ -145,11 +143,11 @@ class Board extends React.Component {
                 <option value="category-2">project category 2</option>
                 <option value="category-3">project category 3</option>
               </select>
+              <p><em>(choose option)</em></p>
             </form>
           </div>
 
           <div class='board-row'>
-            {/* {console.log(this.state.filtered_board)} */}
             {tiles}
           </div>
           <div class='board-row'>
@@ -158,6 +156,5 @@ class Board extends React.Component {
       );
     }
   }
-
 
 export default Board
