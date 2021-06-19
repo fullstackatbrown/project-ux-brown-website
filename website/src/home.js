@@ -45,6 +45,9 @@ class Home extends React.Component {
   }
 
   render() {
+    //TODO: al change routes and arrive on top
+    //TODO: al add svg graphics by Coordinates & CSS
+    //TODO: al figure out graphics for landing page (gradiant color on orange bg)
     return (
       <div>
         <div className="panel-landing">
