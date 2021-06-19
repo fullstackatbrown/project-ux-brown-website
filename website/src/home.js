@@ -6,64 +6,14 @@ import React from 'react';
 import Profile from './profile.js';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
+import data from './data.json';
+import EventTile from './event_tile.js';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-
-    this.members = [
-      {
-        image: 'https://via.placeholder.com/80',
-        name: 'first, lastname',
-        role: 'UX Designer',
-        class: '\'23'
-
-      },
-
-      {
-        image: 'https://via.placeholder.com/80',
-        name: 'first, lastname',
-        role: 'UX Designer',
-        class: '\'23'
-
-      },
-      {
-        image: 'https://via.placeholder.com/80',
-        name: 'first, lastname',
-        role: 'UX Designer',
-        class: '\'23'
-
-      },
-      {
-        image: 'https://via.placeholder.com/80',
-        name: 'first, lastname',
-        role: 'UX Designer',
-        class: '\'23'
-
-      },
-      {
-        image: 'https://via.placeholder.com/80',
-        name: 'first, lastname',
-        role: 'UX Designer',
-        class: '\'23'
-
-      },
-      {
-        image: 'https://via.placeholder.com/80',
-        name: 'first, lastname',
-        role: 'UX Designer',
-        class: '\'23'
-
-      },
-      {
-        image: 'https://via.placeholder.com/80',
-        name: 'first, lastname',
-        role: 'UX Designer',
-        class: '\'23'
-
-      }
-    ]
-
+    this.members = data.profiles;
+    this.events = data.events;
   }
 
   renderProfile(user) {
@@ -74,6 +24,21 @@ class Home extends React.Component {
           name={user.name}
           role={user.role}
           class={user.class}
+        />
+      </div>
+    );
+  }
+
+  renderEventTile(tile) {
+    return (
+      <div className="event-item">
+        <EventTile
+          title={tile.title}
+          description={tile.description}
+          date={tile.date}
+          date_words={tile.date_words}
+          status={tile.status}
+          add_link={tile.add_link}
         />
       </div>
     );
@@ -107,9 +72,9 @@ class Home extends React.Component {
                 For general inquiries, email us at uxbrownrisd@brown.edu.
               </p>
               <div className="social">
-                <SocialIcon className="social" url="" network="facebook"/>
-                <SocialIcon className="social" url="" network="linkedin"/>
-                <SocialIcon className="social" url="" network="instagram"/>
+                <SocialIcon className="social" url="" network="facebook" />
+                <SocialIcon className="social" url="" network="linkedin" />
+                <SocialIcon className="social" url="" network="instagram" />
               </div>
             </div>
             <div className="col">
@@ -123,6 +88,35 @@ class Home extends React.Component {
               <br />
               <Button variant='contained' color="secondary">
                 <Link to="/about">Learn More</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="panel-event">
+          <div className="about-content">
+            <div className="row">
+              <div className="subtitle-bright">
+                <b>Events</b>
+              </div>
+              <Button variant="contained" color="secondary">
+                <Link to="/events">Explore All</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="events">
+            {this.events.map(tile => this.renderEventTile(tile)).slice(0, 3)}
+          </div>
+        </div>
+        <div className="panel-projects">
+          <div className="project-content">
+            <div className="left-col">
+              <div className="subtitle-bright"><b>Projects</b></div>
+              <p className="content-bright">
+                Need a design for your newest side hustle, or want to get involved as a designer? Make something awesome with us!
+              </p>
+              <br />
+              <Button variant="contained" color="secondary">
+                <Link to="/projects">View Our Projects</Link>
               </Button>
             </div>
           </div>
