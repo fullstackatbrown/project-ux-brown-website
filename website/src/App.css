@@ -88,7 +88,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8vh 150px 60px 150px;
+  margin: 5vh 150px 60px 150px;
 }
 
 .col {
@@ -133,4 +133,62 @@ h1 {
 .profile-item {
   margin-top: 3.5vh;
   margin-right: 3.5vh;
+}
+
+.panel-event {
+  background-color: #15141B;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.row {
+  width: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle-bright {
+  font-size: 40px;
+  margin-top: 40px;
+  color: white;
+}
+
+.events {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event-item {
+  margin-top: 3.5vh;
+  margin-right: 3.5vh;
+}
+
+.panel-projects {
+  background-color: #212129;
+  min-height: 60vh;
+  overflow: hidden;
+}
+
+.left-col {
+  width: 40%;
+  font-family: 'Space Grotesk', sans-serif;
+  top: 0
+}
+
+.project-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5vh 150px 60px 150px;
+}
+
+.content-bright {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-right: 100px;
+  color: white;
 }
