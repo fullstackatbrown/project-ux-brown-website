@@ -3,6 +3,7 @@ import './App.css';
 import './events.css'
 import EventTile from './event_tile.js'
 import DarkHeader from './dark_header.js';
+import data from './data.json';
 //import DateObject from "react-date-object";
 
 class Events extends React.Component {
@@ -16,6 +17,7 @@ class Events extends React.Component {
     console.log(date_1);
     console.log(date_2);
 
+    // this.total_board = data.events
     this.total_board = [
       {
         title: 'Event 1',
