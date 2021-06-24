@@ -3,6 +3,10 @@ import './App.css';
 import './board.css'
 import Tile from './tile.js'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import 'font-awesome/css/font-awesome.min.css';
+
 class Board extends React.Component {
   constructor(props) {
     super(props);
@@ -133,20 +137,27 @@ class Board extends React.Component {
 
       return (
         <div class='board'>
-          <div>
-            <form>
-              <label for="filter">Filter</label>
-              <select name="filter" id="filter" onChange={this.handleChange}>
-                <option value="all-categories">all projects</option>
-                <option value="category-0">project category 0</option>
-                <option value="category-1">project category 1</option>
-                <option value="category-2">project category 2</option>
-                <option value="category-3">project category 3</option>
-              </select>
-              <p><em>(choose option)</em></p>
-            </form>
+        <div class='filter-container'>
+        <form>
+          <div class='filter-label'>
+            <label for="filter">Filter</label>
+            <p><em>(click option)</em></p>
           </div>
-
+          <div class='circles'>
+          <FontAwesomeIcon class='aquamarine-circle' icon={faCircle}/>
+          <FontAwesomeIcon class='yellow-circle' icon={faCircle}/>
+          <FontAwesomeIcon class='coral-circle' icon={faCircle}/>
+          <FontAwesomeIcon class='blue-circle' icon={faCircle}/>
+          </div>
+          <select name="filter" id="filter" onChange={this.handleChange} size='5'>
+            <option value="all-categories" selected>all projects</option>
+            <option value="category-0">project category 0</option>
+            <option value="category-1">project category 1</option>
+            <option value="category-2">project category 2</option>
+            <option value="category-3">project category 3</option>
+          </select>
+        </form>
+        </div>
           <div class='board-row'>
             {tiles}
           </div>

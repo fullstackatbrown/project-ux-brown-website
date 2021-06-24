@@ -20,24 +20,23 @@ to make square look like circle */
 
 label {
   padding-right: 10px;
-  font-family: 'Space Grotesk';
-  font-style: normal;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 24px;
-  line-height: 31px;
 }
 
 select {
   -webkit-appearance: none;
+  overflow: auto;
+  outline: none;
 
-  font-family: 'Space Grotesk';
-  font-style: normal;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  line-height: 26px;
   background: #FFF2E6;
-  width: auto;
   padding: 0 10px 0 10px;
+  height: 150px;
+  border: none;
 }
 
 p {
@@ -45,5 +44,37 @@ p {
 }
 
 form {
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  width: 500px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.circles {
+  display: flex;
+  flex-direction: column;
+  width: 25px;
+  height: 200px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.aquamarine-circle {
+  color: #ADDCD1;
+  padding-bottom: 2px;
+}
+
+.yellow-circle {
+  color: #FFCC01;
+  padding-bottom: 2px;
+}
+
+.coral-circle {
+  color: #FF8260;
+  padding-bottom: 2px;
+}
+
+.blue-circle {
+  color: #2D56C2;
 }
