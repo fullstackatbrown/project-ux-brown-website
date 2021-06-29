@@ -18,6 +18,11 @@ to make square look like circle */
   justify-content: space-around;
 }
 
+body {
+  min-height: 100%;
+  border: 1px transparent;
+}
+
 label {
   padding-right: 10px;
   font-family: 'Space Grotesk', sans-serif;
