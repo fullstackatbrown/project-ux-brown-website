@@ -5,6 +5,10 @@
 to add to each list component in css and set large border-radius
 to make square look like circle */
 
+* {
+  box-sizing: border-box;
+}
+
 .board {
   display: flex;
   flex-direction: column;
@@ -44,10 +48,6 @@ select {
   border: none;
 }
 
-p {
-  padding-top: 5px;
-}
-
 form {
   display: flex;
   justify-content: flex-end;
@@ -56,16 +56,42 @@ form {
   margin-top: 20px;
 }
 
-.circles {
-  display: flex;
-  flex-direction: column;
-  width: 25px;
-  height: 200px;
-  margin-left: 10px;
-  margin-top: 30px;
+.dropdown {
+  margin-left: 15px;
+  background: url('./filter-bars.png');
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+  border: none;
 }
 
-.aquamarine-circle {
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 50px;
+  width: 250px;
+  padding: 10px;
+
+  background: white;
+  border: 1px solid gray;
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.circles {
+  margin-right: 10px;
+  width: 2px;
+
+  flex-basis: 25px;
+  min-width: 25px;
+  max-width: 40px;
+}
+
+/* .aquamarine-circle {
   color: #ADDCD1;
   padding-bottom: 2px;
 }
@@ -82,4 +108,4 @@ form {
 
 .blue-circle {
   color: #2D56C2;
-}
+} */

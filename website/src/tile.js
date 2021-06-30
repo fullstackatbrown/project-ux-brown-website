@@ -18,9 +18,6 @@ class Tile extends React.Component {
 }
 
 componentDidUpdate(prevProps) {
-  console.log("is updating");
-  console.log(prevProps);
-  console.log(this.props);
   if (this.props !== prevProps) {
     const state = {
       title: this.props.title,
