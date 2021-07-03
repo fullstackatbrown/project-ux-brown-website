@@ -1,87 +1,10 @@
 import React from 'react';
 import './App.css';
 import './board.css'
+
 import Tile from './tile.js'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
-import 'font-awesome/css/font-awesome.min.css';
-
-class Dropdown extends React.Component {
-  constructor(props) {
-    super(props);
-    this.options = this.props.options
-    this.state = {
-      displayed_options: [],
-      open: false
-    };
-
-    this.renderOptions = this.renderOptions.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-
-  }
-
-  renderOptions(option) {
-    return (
-      <Option
-        color={option.color}
-        content={option.content}
-      />
-    );
-  }
-
-// come back to this, unfinished-- need to close dropdown after initial open when user clicks outside of it
-
-// i think the problem is that this re-renders the page each time, so the dropdown goes back to blank as soon as it loads(?)
-
-// this.setState({displayed_options: this.options})
-  handleClick() {
-
-  }
-
-  // display this.options[0] (all categories), others are hidden until onClick, then display them all
-  // next step is to figure out how to filter based on which option is clicked
-
-
-// <p onClick={this.handleClick}>{display}</p>
-
-  render() {
-
-    const display = this.options.map(option => this.renderOptions(option));
-
-      return (
-        <div>
-          <button className='dropdown' onClick={this.handleClick}></button>
-          <div>{display}</div>
-        </div>
-      );
-  }
-}
-
-class Option extends React.Component {
-  constructor(props) {
-    super(props);
-    this.circle = <FontAwesomeIcon className='circles' style={{color: this.props.color}} icon={faCircle}/>;
-    this.content = this.props.content;
-    this.clicked = false;
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  // <p class='circles'>{this.circle}</p>
-  // <p class='content'>{this.content}</p>
-  // </button>
-
-  handleClick() {
-    this.clicked = !this.clicked;
-  }
-
-  render() {
-    return (
-      <button className='option' onClick={this.handleClick}>{this.circle}{this.content}</button>
-  );
-  }
-}
+import Option from './option.js'
+import Dropdown from './dropdown.js'
 
 class Board extends React.Component {
   constructor(props) {
@@ -172,10 +95,11 @@ class Board extends React.Component {
       }
     ]
     this.state = {
-      filtered_board: this.total_board
+      filtered_board: this.total_board,
+      dropdown: []
     };
-    this.handleChange = this.handleChange.bind(this);
     this.filterBoard = this.filterBoard.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   filterBoard(cat) {
@@ -191,12 +115,6 @@ class Board extends React.Component {
     return filtered;
   }
 
-  handleChange(event) {
-    const choice = event.target.value;
-    const filtered = this.filterBoard(choice);
-    this.setState({filtered_board: filtered})
-  }
-
   renderTile(tile) {
     return (
       <Tile
@@ -208,40 +126,34 @@ class Board extends React.Component {
     );
   }
 
+// let choice = event.target.value;
+// let filtered = this.filterBoard(choice);
+// this.setState({filtered_board: filtered});
+  handleChange(event) {
+    let options = [
+        <Option color='transparent' content='all categories'/>,
+        <Option color='#ADDCD1' content='project category 0'/>,
+        <Option color='#FFCC01' content='project category 1'/>,
+        <Option color='#FF8260' content='project category 2'/>,
+        <Option color='#2D56C2' content='project category 3'/>
+    ];
+    this.setState({dropdown: options})
+  }
+// <Dropdown onChange={this.handleChange}/>
   render() {
     const tiles = this.state.filtered_board.map(tile => this.renderTile(tile));
-    const dropdown_options = [
-      {
-        color: 'transparent',
-        content: 'all categories'
-      },
-      {
-        color: '#ADDCD1',
-        content: 'project category 0'
-      },
-      {
-        color: '#FFCC01',
-        content: 'project category 1'
-      },
-      {
-        color: '#FF8260',
-        content: 'project category 2'
-      },
-      {
-        color: '#2D56C2',
-        content: 'project category 3'
-      }
-    ];
 
       return (
         <div class='board'>
         <div class='filter-container'>
         <form>
-          <div class='filter-label'>
-            <label for="filter">Filter</label>
+          <div class='filter'>
+            <p class="filter-label">Filter</label>
             <p><em>(click option)</em></p>
           </div>
-          <Dropdown options={dropdown_options}/>
+
+        <button className='dropdown' onClick={this.handleChange}></button>
+        <div>{this.state.dropdown}</div>
         </form>
 
         </div>

@@ -27,7 +27,7 @@ body {
   border: 1px transparent;
 }
 
-label {
+.filter-label {
   padding-right: 10px;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
@@ -58,7 +58,7 @@ form {
 
 .dropdown {
   margin-left: 15px;
-  background: url('./filter-bars.png');
+  background-image: url('./filter-bars.png');
   width: 50px;
   height: 50px;
   box-shadow: none;
