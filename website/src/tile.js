@@ -31,7 +31,7 @@ componentDidUpdate(prevProps) {
 
   render() {
     const listItems = this.state.categories.map((category) =>
-    <li class={category.cssName}>{category.displayName}</li>);
+    <li class={category.key}>{category.displayName}</li>);
 
     return (
       <div class='tile-container'>

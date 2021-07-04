@@ -3,8 +3,10 @@ import './App.css';
 import './board.css'
 
 import Tile from './tile.js'
-import Option from './option.js'
-import Dropdown from './dropdown.js'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { BiMenu } from 'react-icons/bi';
 
 class Board extends React.Component {
   constructor(props) {
@@ -17,11 +19,11 @@ class Board extends React.Component {
         status: 'Ongoing',
         categories: [
             {
-              cssName: 'category-1',
+              key: 'category-2',
               displayName: 'Project Tag'
             },
             {
-              cssName: 'category-2',
+              key: 'category-3',
               displayName: 'Project Tag'
             }
           ]
@@ -33,7 +35,7 @@ class Board extends React.Component {
         status: 'Ongoing',
         categories: [
           {
-            cssName: 'category-1',
+            key: 'category-2',
             displayName: 'Project Tag'
           }
         ]
@@ -46,7 +48,7 @@ class Board extends React.Component {
         status: 'Ongoing',
         categories: [
             {
-              cssName: 'category-0',
+              key: 'category-1',
               displayName: 'Project Tag'
             }
           ]
@@ -58,11 +60,11 @@ class Board extends React.Component {
         status: 'Ongoing',
         categories: [
             {
-              cssName: 'category-1',
+              key: 'category-2',
               displayName: 'Project Tag'
             },
             {
-              cssName: 'category-2',
+              key: 'category-3',
               displayName: 'Project Tag'
             }
           ]
@@ -75,7 +77,7 @@ class Board extends React.Component {
         status: 'Ongoing',
         categories: [
           {
-            cssName: 'category-1',
+            key: 'category-2',
             displayName: 'Project Tag'
           }
         ]
@@ -88,18 +90,26 @@ class Board extends React.Component {
         status: 'Ongoing',
         categories: [
             {
-              cssName: 'category-0',
+              key: 'category-1',
               displayName: 'Project Tag'
             }
           ]
       }
     ]
+    this.dropdown_options = [
+        { value: "all categories", key: 'all-categories', circle_color: 'transparent'},
+        { value: "project category", key: 'category-1', circle_color: '#ADDCD1'},
+        { value: "project category", key: 'category-2', circle_color: '#FFCC01'},
+        { value: "project category", key: 'category-3', circle_color: '#FF8260'},
+        { value: "project category", key: 'category-4', circle_color: '#2D56C2'}
+      ]
     this.state = {
       filtered_board: this.total_board,
-      dropdown: []
+      showItems: false,
+      selectedItem: this.dropdown_options && this.dropdown_options[0]
     };
     this.filterBoard = this.filterBoard.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.dropDown = this.dropDown.bind(this);
   }
 
   filterBoard(cat) {
@@ -107,7 +117,7 @@ class Board extends React.Component {
     if (cat !== 'all-categories') {
       filtered = this.total_board.filter(tile =>
         (tile.categories.filter(category =>
-          category.cssName.includes(cat))).length > 0)
+          category.key.includes(cat))).length > 0)
     } else {
       filtered = this.total_board;
     }
@@ -126,43 +136,52 @@ class Board extends React.Component {
     );
   }
 
-// let choice = event.target.value;
-// let filtered = this.filterBoard(choice);
-// this.setState({filtered_board: filtered});
-  handleChange(event) {
-    let options = [
-        <Option color='transparent' content='all categories'/>,
-        <Option color='#ADDCD1' content='project category 0'/>,
-        <Option color='#FFCC01' content='project category 1'/>,
-        <Option color='#FF8260' content='project category 2'/>,
-        <Option color='#2D56C2' content='project category 3'/>
-    ];
-    this.setState({dropdown: options})
-  }
-// <Dropdown onChange={this.handleChange}/>
+  dropDown() {
+    this.setState(prevState => ({
+      showItems: !prevState.showItems
+    }));
+  };
+
+  selectItem(item) {
+    this.setState({
+      selectedItem: item,
+      showItems: false,
+      filtered_board: this.filterBoard(item.key)
+    });
+  };
+
   render() {
     const tiles = this.state.filtered_board.map(tile => this.renderTile(tile));
 
+    // <div className="dropdown-hamburger" onClick={this.dropDown}></div>
+
       return (
         <div class='board'>
-        <div class='filter-container'>
-        <form>
-          <div class='filter'>
-            <p class="filter-label">Filter</label>
-            <p><em>(click option)</em></p>
+          <div class='filter-container'>
+          <div class='labels-container'>
+            <p class="filter-label">Filter</p>
+            <BiMenu className="dropdown-hamburger" onClick={this.dropDown}/>
           </div>
-
-        <button className='dropdown' onClick={this.handleChange}></button>
-        <div>{this.state.dropdown}</div>
-        </form>
-
-        </div>
-        <div class='board-row'>
-          {tiles}
-        </div>
-        <div class='board-row'>
-
-        </div>
+              <div className="dropdown-container">
+                <div className='dropdown-shadow'>
+                    <div
+                      style={{ display: this.state.showItems ? "block" : "none" }}
+                      className={"dropdown-items"}
+                    >
+                      {this.dropdown_options.map(item => (
+                        <div class='dropdown-item'
+                          key={item.key}
+                          onClick={() => this.selectItem(item)}
+                        >
+                          <FontAwesomeIcon style={{color: item.circle_color}} icon={faCircle}/>
+                          <p className='dropdown-text'>{item.value}</p>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class='board-row'>{tiles}</div>
         </div>
       );
     }

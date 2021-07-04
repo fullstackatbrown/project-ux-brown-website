@@ -1,10 +1,6 @@
 @import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular);
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
 
-/* to create colored circles, look at "before" psuedoelement
-to add to each list component in css and set large border-radius
-to make square look like circle */
-
 * {
   box-sizing: border-box;
 }
@@ -24,88 +20,63 @@ to make square look like circle */
 
 body {
   min-height: 100%;
-  border: 1px transparent;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.dropdown-shadow {
+  box-shadow: 10px 10px 50px DarkGray;
+}
+
+.labels-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 150px;
 }
 
 .filter-label {
-  padding-right: 10px;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 20px;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 24px;
 }
 
-select {
-  -webkit-appearance: none;
-  overflow: auto;
-  outline: none;
-
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  background: #FFF2E6;
-  padding: 0 10px 0 10px;
-  height: 150px;
-  border: none;
+.dropdown-hamburger {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
-form {
-  display: flex;
-  justify-content: flex-end;
-  width: 500px;
-  height: 200px;
-  margin-top: 20px;
-}
-
-.dropdown {
-  margin-left: 15px;
-  background-image: url('./filter-bars.png');
-  width: 50px;
-  height: 50px;
-  box-shadow: none;
-  border: none;
-}
-
-.option {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  height: 50px;
-  width: 250px;
-  padding: 10px;
-
+.dropdown-items div {
+  padding: 12px 6px 12px 12px;
   background: white;
-  border: 1px solid gray;
 
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 20px;
+  width: 260px;
 }
 
-.circles {
-  margin-right: 10px;
-  width: 2px;
-
-  flex-basis: 25px;
-  min-width: 25px;
-  max-width: 40px;
+.dropdown-item {
+  display: flex;
+  align-items: center;
 }
 
-/* .aquamarine-circle {
-  color: #ADDCD1;
-  padding-bottom: 2px;
+.dropdown-text {
+  padding: 0px 0px 3px 20px;
 }
-
-.yellow-circle {
-  color: #FFCC01;
-  padding-bottom: 2px;
-}
-
-.coral-circle {
-  color: #FF8260;
-  padding-bottom: 2px;
-}
-
-.blue-circle {
-  color: #2D56C2;
-} */
