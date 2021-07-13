@@ -1,6 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
 .header {
   display: flex;
@@ -14,8 +13,9 @@ a, a:visited, a:hover {
 }
 
 .club-name-link {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 50px;
+  font-family: 'Space Mono', sans-serif;
+  font-size: 64px;
+  font-weight: bold;
 }
 
 .menu-container {
@@ -31,6 +31,7 @@ a, a:visited, a:hover {
 }
 
 .menu-link {
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
 }

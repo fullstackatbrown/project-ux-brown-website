@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+@import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular);
+
+.projects-header {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  /* 40 gets you to the board container, plus 10 padding on the left of each tile, plus 20 padding-left on board */
+  margin-left: 70px;
+}
+
+.projects-description {
+  font-family: 'Graphik Web Regular', sans-serif;
+  font-size: 24px;
+  margin: 25px 0px 0px 70px;
+  font-weight: 400px;
+}
