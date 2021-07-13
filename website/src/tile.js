@@ -18,9 +18,6 @@ class Tile extends React.Component {
 }
 
 componentDidUpdate(prevProps) {
-  console.log("is updating");
-  console.log(prevProps);
-  console.log(this.props);
   if (this.props !== prevProps) {
     const state = {
       title: this.props.title,
@@ -34,7 +31,7 @@ componentDidUpdate(prevProps) {
 
   render() {
     const listItems = this.state.categories.map((category) =>
-    <li class={category.cssName}>{category.displayName}</li>);
+    <li class={category.key}>{category.displayName}</li>);
 
     return (
       <div class='tile-container'>

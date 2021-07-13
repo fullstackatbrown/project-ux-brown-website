@@ -1,8 +1,9 @@
 @import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular);
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
 
-/* to create colored circles, look at "before" psuedoelement
-to add to each list component in css and set large border-radius
-to make square look like circle */
+* {
+  box-sizing: border-box;
+}
 
 .board {
   display: flex;
@@ -17,13 +18,65 @@ to make square look like circle */
   justify-content: space-around;
 }
 
-form {
-  float: right;
-  padding: 0px 100px 75px 0px;
+body {
+  min-height: 100%;
 }
 
-option {
-  font-family: 'Graphik Web Regular', sans-serif;
-  font-weight: 700;
+.filter-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.dropdown-shadow {
+  box-shadow: 10px 10px 50px DarkGray;
+}
+
+.labels-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 150px;
+}
+
+.filter-label {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.dropdown-hamburger {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.dropdown-items div {
+  padding: 12px 6px 12px 12px;
+  background: white;
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
   font-size: 20px;
+  width: 260px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-text {
+  padding: 0px 0px 3px 20px;
 }
