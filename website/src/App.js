@@ -1,10 +1,10 @@
 import './App.css';
-import Footer from './footer.js';
+import Footer from './header-footer/footer.js';
 import { Switch, Route } from 'react-router-dom';
-import About from './about.js';
-import Home from './home.js';
-import Projects from './projects.js';
-import Events from './events.js';
+import About from './about/about.js';
+import Home from './home/home.js';
+import Projects from './projects/projects.js';
+import Events from './events/events.js';
 
 function App() {
   return (

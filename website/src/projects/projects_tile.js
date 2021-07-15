@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import './tile.css'
+import '../App.css';
+import './projects_tile.css'
 
 
 class Tile extends React.Component {

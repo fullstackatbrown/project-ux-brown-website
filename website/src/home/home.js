@@ -1,13 +1,13 @@
-import Header from './header.js';
-import Footer from './footer.js';
-import './App.css';
+import Header from '../header-footer/header.js';
+import Footer from '../header-footer/footer.js';
+import '../App.css';
 import { Button } from '@material-ui/core';
 import React from 'react';
 import Profile from './profile.js';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
-import data from './data.json';
-import EventTile from './event_tile.js';
+import data from '../events/events-data.json';
+import EventTile from '../events/event_tile.js';
 
 class Home extends React.Component {
   constructor(props) {

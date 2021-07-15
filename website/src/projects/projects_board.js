@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
-import './board.css'
+import '../App.css';
+import './projects_board.css'
 
-import Tile from './tile.js'
+import Tile from './projects_tile.js'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'

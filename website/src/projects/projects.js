@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './header.js'
-import Board from './board.js'
-import './App.css'
-import './projects.css'
+import Header from '../header-footer/header.js'
+import Board from '../projects/projects_board.js'
+import '../App.css'
+import '../projects/projects.css'
 
 class Projects extends React.Component {
 

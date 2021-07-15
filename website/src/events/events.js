@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import './events.css'
 import EventTile from './event_tile.js'
-import DarkHeader from './dark_header.js';
-import data from './data.json';
+import DarkHeader from '../header-footer/dark_header.js';
+import data from './events-data.json';
 //import DateObject from "react-date-object";
 
 class Events extends React.Component {
