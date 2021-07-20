@@ -5,17 +5,17 @@
   box-sizing: border-box;
 }
 
-.board {
+.projects-board {
   display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  padding-bottom: 30px;
+  flex-direction: row-reverse;
+  padding: 30px 30px 30px 60px;
 }
 
-.board-row {
+.board-tiles {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  padding-top: 100px;
 }
 
 body {
@@ -29,21 +29,16 @@ body {
 
 .dropdown-container {
   display: flex;
-  justify-content: flex-end;
   cursor: pointer;
-  margin-right: 10px;
   margin-top: 10px;
-}
-
-.dropdown-shadow {
-  box-shadow: 10px 10px 50px DarkGray;
+  background: white;
+  box-shadow: 10px 10px 30px DarkGray;
 }
 
 .labels-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
   margin-right: 150px;
 }
 
@@ -69,7 +64,6 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  width: 260px;
 }
 
 .dropdown-item {

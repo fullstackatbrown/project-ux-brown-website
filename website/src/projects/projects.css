@@ -4,7 +4,6 @@
 .projects-header {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 48px;
-  /* 40 gets you to the board container, plus 10 padding on the left of each tile, plus 20 padding-left on board */
   margin-left: 70px;
 }
 
