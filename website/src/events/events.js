@@ -13,7 +13,7 @@ class Events extends React.Component {
     // want these dates to be in UTC
     // time needs to be in UTC (universal coordinated time) year, month (0 indexed), date, hour, minute
     var date_1 = new Date(Date.UTC(2021, 4, 7, 21, 0));
-    var date_2 = new Date(Date.UTC(2021, 11, 11, 1, 0)); // future date
+    var date_2 = new Date(Date.UTC(2021, 6, 20, 2, 5)); // 10:05pm EST, July 19th
     console.log(date_1);
     console.log(date_2);
 
@@ -23,7 +23,7 @@ class Events extends React.Component {
         title: 'Event 1',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
         date: date_2,
-        date_words: 'Mon, December 11, 1:00 pm EST',
+        date_words: 'Mon, July 19th, 10:05pm EST',
         status: true,
         add_link: "https://www.fullstackatbrown.com/",
 

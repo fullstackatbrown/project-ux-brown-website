@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
 @import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular);
 
 /* to create colored circles, look at "before" psuedoelement
@@ -29,7 +30,7 @@ to make square look like circle */
 
 }
 .section {
-  font-family: 'Space-Grotesk', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
