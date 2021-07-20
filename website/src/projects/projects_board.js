@@ -11,7 +11,6 @@ import { BiMenu } from 'react-icons/bi';
 class Board extends React.Component {
   constructor(props) {
     super(props);
-    this.total_categories = ['all-categories', 'category-0', 'category-1', 'category-2', 'category-3'];
     this.total_board = [
       {
         title: 'Project Title',
@@ -106,8 +105,9 @@ class Board extends React.Component {
     this.state = {
       filtered_board: this.total_board,
       showItems: false,
-      selectedItem: this.dropdown_options && this.dropdown_options[0]
+
     };
+
     this.filterBoard = this.filterBoard.bind(this);
     this.dropDown = this.dropDown.bind(this);
   }
@@ -144,7 +144,6 @@ class Board extends React.Component {
 
   selectItem(item) {
     this.setState({
-      selectedItem: item,
       showItems: false,
       filtered_board: this.filterBoard(item.key)
     });
@@ -153,35 +152,39 @@ class Board extends React.Component {
   render() {
     const tiles = this.state.filtered_board.map(tile => this.renderTile(tile));
 
-    // <div className="dropdown-hamburger" onClick={this.dropDown}></div>
-
       return (
-        <div class='board'>
+        <div class='projects-board'>
+
           <div class='filter-container'>
-          <div class='labels-container'>
-            <p class="filter-label">Filter</p>
-            <BiMenu className="dropdown-hamburger" onClick={this.dropDown}/>
-          </div>
-              <div className="dropdown-container">
-                <div className='dropdown-shadow'>
-                    <div
-                      style={{ display: this.state.showItems ? "block" : "none" }}
-                      className={"dropdown-items"}
-                    >
-                      {this.dropdown_options.map(item => (
-                        <div class='dropdown-item'
-                          key={item.key}
-                          onClick={() => this.selectItem(item)}
-                        >
-                          <FontAwesomeIcon style={{color: item.circle_color}} icon={faCircle}/>
-                          <p className='dropdown-text'>{item.value}</p>
-                        </div>
-                      ))}
+
+            <div class='labels-container'>
+              <p class="filter-label">Filter</p>
+              <BiMenu className="dropdown-hamburger" onClick={this.dropDown}/>
+            </div>
+
+            <div className="dropdown-container">
+              <div className='dropdown-shadow'>
+                  <div
+                    style={{ display: this.state.showItems ? "block" : "none" }}
+                    className={"dropdown-items"}
+                  >
+                    {this.dropdown_options.map(item => (
+                      <div class='dropdown-item'
+                        key={item.key}
+                        onClick={() => this.selectItem(item)}
+                      >
+                        <FontAwesomeIcon style={{color: item.circle_color}} icon={faCircle}/>
+                        <p className='dropdown-text'>{item.value}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
+
             </div>
-          <div class='board-row'>{tiles}</div>
+
+            <div class='board-tiles'>{tiles}</div>
+            
         </div>
       );
     }
