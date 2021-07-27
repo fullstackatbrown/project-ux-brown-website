@@ -30,6 +30,22 @@ to make square look like circle */
 
 }
 .section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  color: white;
+  padding: 7px 0 7px 20px;
+  margin-left: 40px;
+}
+
+.section2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: 600;

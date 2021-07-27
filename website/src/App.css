@@ -69,7 +69,7 @@ h1 {
   align-items: center;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 40px;
-  margin: 25vh 180px 60px 180px;
+  margin: 0px 180px 30px 180px;
 }
 
 .btn {
@@ -87,7 +87,7 @@ h1 {
 .about-content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   margin: 5vh 150px 60px 150px;
 }
 
@@ -179,10 +179,15 @@ h1 {
   top: 0
 }
 
+.right-col {
+  width: 50%;
+  font-family: 'Space Grotesk', sans-serif;
+  top: 0;
+}
+
 .project-content {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   margin: 5vh 150px 60px 150px;
 }
 

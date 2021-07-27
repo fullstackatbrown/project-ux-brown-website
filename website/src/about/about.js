@@ -16,10 +16,10 @@ function About() {
           sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div className="list-inline">
           <div className="list-item">
-            <img src="https://via.placeholder.com/550x250"></img>
+            <img src="https://via.placeholder.com/550x250" alt="placeholder"></img>
           </div>
           <div className="list-item">
-            <img src="https://via.placeholder.com/550x250"></img>
+            <img src="https://via.placeholder.com/550x250" alt="placeholder"></img>
           </div>
         </div>
         <h1>Our Mission</h1>
@@ -30,7 +30,7 @@ function About() {
         <h1>What is UX and Product Design anyway?</h1>
         <div className="list-inline">
           <div clasName="list-item">
-            <img src="https://via.placeholder.com/550x250"></img>
+            <img src="https://via.placeholder.com/550x250" alt="placeholder"></img>
           </div>
         </div>
       </div>
