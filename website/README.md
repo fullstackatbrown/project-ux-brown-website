@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Instructions for Use
+### Events Page
+Events can be added to the events page by adding the event to the total_board section of the website/src/events/events.js file. You can customize the name, image, event link and time for each event. To account for time zone difference, the date of the event is configured using Coordinated Universal Time. For example, new Date(Date.UTC(2021, 6, 20, 2, 5)) is 10:05pm EST, July 19th. Date.UTC takes 5 arguments: year, month, day, hour, minute. It's important to know that the month is zero-indexed, so January is 0, February is 1, etc. Also be sure to set the date and time correctly in UTC. In the example, the date is July 20th in UTC, but is July 19th in Eastern Time. Events will automatically be moved from the "Upcoming events" to "Past events" section based on the time you put for the date.
+
+To support the "Add to calendar" button, follow the instructions here: https://support.google.com/calendar/answer/37083?hl=en#zippy=%2Cshare-as-a-link After making a public calendar and adding your desired events, click on an event, click the three dots in the top right corner and then choose "Publish event."  This will generate a link to allow users to add the event to their own google calendar. Allowing users to add events to their own calendar will not change the events on your calendar, so your guests won't be able to accidentally change the name or time on your calendar in the process of adding it to their own.
