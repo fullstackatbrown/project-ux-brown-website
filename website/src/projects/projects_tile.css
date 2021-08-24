@@ -11,7 +11,7 @@
 .tile-container {
   display: flex;
   flex-direction: column;
-  width: 507px;
+  width: 430px;
   height: 512px;
   margin: 10px 10px 50px 10px;
 }

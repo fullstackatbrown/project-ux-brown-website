@@ -26,12 +26,12 @@ a, a:visited, a:hover {
 .menu {
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 320px;
   justify-content: space-between;
 }
 
 .menu-link {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
 }

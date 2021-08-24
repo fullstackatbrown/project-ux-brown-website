@@ -184,7 +184,7 @@ class Board extends React.Component {
             </div>
 
             <div class='board-tiles'>{tiles}</div>
-            
+
         </div>
       );
     }
