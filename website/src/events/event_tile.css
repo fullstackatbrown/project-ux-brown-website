@@ -11,7 +11,7 @@
 .tile-container {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: 430px;
   height: 450px;
   margin: 10px 10px 50px 10px;
   position:relative;
@@ -35,7 +35,7 @@
 }
 
 .date_words {
-  font-family: 'Space Mono', sans-serif;
+  font-family: 'Graphik Web Regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
