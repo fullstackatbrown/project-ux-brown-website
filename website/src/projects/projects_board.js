@@ -121,7 +121,7 @@ class Board extends React.Component {
     } else {
       filtered = this.total_board;
     }
-
+    
     return filtered;
   }
 

@@ -3,13 +3,14 @@
 
 .projects-header {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 48px;
+  font-size: 40px;
   margin-left: 70px;
 }
 
 .projects-description {
   font-family: 'Graphik Web Regular', sans-serif;
-  font-size: 24px;
-  margin: 25px 0px 0px 70px;
+  font-size: 18px;
+  margin: 25px 70px 0px 70px;
   font-weight: 400px;
+  line-height: 1.6;
 }

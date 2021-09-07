@@ -55,7 +55,6 @@ class Home extends React.Component {
       color: 'white'
     }
     //TODO: al change routes and arrive on top
-    //TODO: al add svg graphics by Coordinates & CSS
     return (
       <div>
         <div className="panel-landing">
