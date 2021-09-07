@@ -44,7 +44,16 @@ class Home extends React.Component {
     );
   }
 
+
   render() {
+    const buttonStyle = {
+      background: "#FFF"
+    }
+
+    const buttonStyle2 = {
+      background: "#FF8260",
+      color: 'white'
+    }
     //TODO: al change routes and arrive on top
     //TODO: al add svg graphics by Coordinates & CSS
     return (
@@ -65,7 +74,7 @@ class Home extends React.Component {
             </svg>
           </div>
           <div className="btn">
-            <Button variant="contained" href="#about" color="white">Find Out More</Button>
+            <Button variant="contained" href="#about" style={buttonStyle}>Find Out More</Button>
           </div>
           <div style={{ display: "flex", justifyContent: "flex-start", marginRight: "0px" }}>
             <svg width="211" height="214" viewBox="0 0 350 214" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +118,7 @@ class Home extends React.Component {
                 {this.members.map(user => this.renderProfile(user))}
               </div>
               <br />
-              <Button variant='contained' color="secondary">
+              <Button variant='contained' style={buttonStyle2}>
                 <Link to="/about">Learn More</Link>
               </Button>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -126,7 +135,7 @@ class Home extends React.Component {
               <div className="subtitle-bright">
                 <b>Events</b>
               </div>
-              <Button variant="contained" color="secondary">
+              <Button variant="contained" style={buttonStyle2}>
                 <Link to="/events">Explore All</Link>
               </Button>
             </div>
@@ -143,7 +152,7 @@ class Home extends React.Component {
                 Need a design for your newest side hustle, or want to get involved as a designer? Make something awesome with us!
               </p>
               <br />
-              <Button variant="contained" color="secondary">
+              <Button variant="contained" style={buttonStyle2}>
                 <Link to="/projects">View Our Projects</Link>
               </Button>
             </div>
