@@ -54,7 +54,7 @@ class Home extends React.Component {
       background: "#FF8260",
       color: 'white'
     }
-    //TODO: al change routes and arrive on top
+    
     return (
       <div>
         <div className="panel-landing">
